@@ -1,0 +1,24 @@
+////// DELETE BEFORE USE
+
+3,10 : (in example, can also be 2,4 etc), this is the map size 
+
+= : Easy Tile 
+# : Medium Tile
+~ : Water Tile
+v : crops tile
+S : start
+E : end
+
+
+Example map to follow :
+///// ENDOF : DELETE BEFORE USE
+
+3,10
+
+=,#,#,#,~,~,v,=,#,#,=
+=,#,#,#,=,#,=,=,=,=,E
+S,#,=,=,~,~,~,v,v,=,#
+
+
+
+

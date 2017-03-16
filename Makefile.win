@@ -1,0 +1,67 @@
+# Project: Code_Race
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o point2d.o tile.o easytile.o normaltile.o croptile.o watertile.o competitor.o frog.o rabbit.o turtle.o fileparser.o racetrack.o listtype.o
+LINKOBJ  = main.o point2d.o tile.o easytile.o normaltile.o croptile.o watertile.o competitor.o frog.o rabbit.o turtle.o fileparser.o racetrack.o listtype.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = Code_Race.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+point2d.o: point2d.cpp
+	$(CPP) -c point2d.cpp -o point2d.o $(CXXFLAGS)
+
+tile.o: tile.cpp
+	$(CPP) -c tile.cpp -o tile.o $(CXXFLAGS)
+
+easytile.o: easytile.cpp
+	$(CPP) -c easytile.cpp -o easytile.o $(CXXFLAGS)
+
+normaltile.o: normaltile.cpp
+	$(CPP) -c normaltile.cpp -o normaltile.o $(CXXFLAGS)
+
+croptile.o: croptile.cpp
+	$(CPP) -c croptile.cpp -o croptile.o $(CXXFLAGS)
+
+watertile.o: watertile.cpp
+	$(CPP) -c watertile.cpp -o watertile.o $(CXXFLAGS)
+
+competitor.o: competitor.cpp
+	$(CPP) -c competitor.cpp -o competitor.o $(CXXFLAGS)
+
+frog.o: frog.cpp
+	$(CPP) -c frog.cpp -o frog.o $(CXXFLAGS)
+
+rabbit.o: rabbit.cpp
+	$(CPP) -c rabbit.cpp -o rabbit.o $(CXXFLAGS)
+
+turtle.o: turtle.cpp
+	$(CPP) -c turtle.cpp -o turtle.o $(CXXFLAGS)
+
+fileparser.o: fileparser.cpp
+	$(CPP) -c fileparser.cpp -o fileparser.o $(CXXFLAGS)
+
+racetrack.o: racetrack.cpp
+	$(CPP) -c racetrack.cpp -o racetrack.o $(CXXFLAGS)
+
+listtype.o: listtype.cpp
+	$(CPP) -c listtype.cpp -o listtype.o $(CXXFLAGS)
